@@ -1,0 +1,7 @@
+ENV Guide
+
+DATABASE_URL=
+
+PORT=
+
+JWT_SECRET=
