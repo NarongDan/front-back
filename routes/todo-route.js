@@ -1,11 +1,8 @@
 const express = require("express");
+const { getTodoByUser } = require("../controllers/todo-controller");
 const router = express();
 
-router.get("/", (req, res, next) => {
-  console.log("in todoRoute get / ");
-  console.log(req.user);
-  res.json({ message: `Hello, ${req.user.username}` });
-});
+router.get("/", getTodoByUser);
 router.post("/", (req, res) => {});
 router.put("/:id", (req, res) => {});
 router.delete("/:id", (req, res) => {});
